@@ -1,3 +1,10 @@
+.*
+.env
 secrets
+web_app/secrets
 .idea
 .DS_Store
+secrets
+secrets/.env
+web_app/.env
+

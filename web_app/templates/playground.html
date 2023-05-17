@@ -1,0 +1,186 @@
+{% extends "template.html" %}
+{% block content %}
+
+    <link rel="stylesheet" href="https://unpkg.com/vis-network@7.10.2/standalone/umd/vis-network.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vis-network@7.10.2/standalone/umd/vis-network.min.js"></script>
+    <style>
+        #graph {
+            width: 50%;
+            height: 500px;
+            border: 1px solid lightgray;
+            float: right;
+        }
+
+        #text {
+            width: 48%;
+            height: 500px;
+            float: left;
+        }
+
+        .button-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        button:active {
+            transform: scale(0.9);
+            transition: transform 0.1s;
+        }
+
+    </style>
+
+    <textarea id="text"></textarea>
+    <div id="graph"></div>
+    <div style="width: 48%; float: left; margin-top: 20px;">
+        <label for="model">Model:</label>
+        <select id="model">
+            {% for option in model_options %}
+                <option value="{{ option.value }}">{{ option.label }}</option>
+                <option value="{{ option.value }}"
+                        {% if option.value=="text-davinci-003" %}selected{% endif %}>{{ option.label }}
+                </option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="freshness-slider">Freshness:</label>
+        <input type="range" id="freshness-slider" min="0" max="1" value="0.5" step="0.1"
+               oninput="updateFreshnessValue(this.value)">
+        <span id="freshness-value">0.5</span>
+        <br>
+        <input type="range" id="frequency-slider" min="0" max="1" value="0.5" step="0.1"
+               oninput="updateFrequencyValue(this.value)">
+        <span id="frequency-value">0.5</span>
+        <br>
+        <input type="range" id="maxtokens-slider" min="1" max="100" value="50"
+               oninput="updateMaxTokensValue(this.value)">
+        <span id="maxtokens-value">50</span>
+        <div class="button-container"> <!-- Add this line -->
+            <button id="submit-button" class="custom-button">Submit</button> <!-- Add the class "custom-button" -->
+            <button id="save-button" class="custom-button">Save Graph</button> <!-- Add the class "custom-button" -->
+        </div> <!-- Add this line -->
+    </div>
+    <script>
+
+        const modelSelect = document.getElementById('model');
+        const freshnessSlider = document.getElementById('freshness-slider');
+        const frequencySlider = document.getElementById('frequency-slider');
+        const maxTokensSlider = document.getElementById('maxtokens-slider');
+        const saveButton = document.getElementById('save-button');
+
+        saveButton.addEventListener('click', function () {
+            const networkData = {
+                nodes: nodes.get(),
+                edges: edges.get(),
+            };
+            save_graph(networkData);
+        });
+
+        function save_graph(network_data) {
+            // Implement the save_graph function here
+        }
+
+        const nodes = new vis.DataSet([]);
+        const edges = new vis.DataSet([]);
+
+        const container = document.getElementById('graph');
+        const data = {nodes: nodes, edges: edges};
+        const options = {
+            manipulation: {
+                enabled: true,
+                initiallyActive: true,
+                editNode: function (nodeData, callback) {
+                    const label = prompt('Edit node label:', nodeData.label);
+                    if (label) {
+                        nodeData.label = label;
+                        callback(nodeData);
+                    }
+                },
+            },
+        };
+
+        const network = new vis.Network(container, data, options);
+
+        const text = document.getElementById('text');
+
+        text.addEventListener('input', function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/update_nodes', true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const graph_data = JSON.parse(xhr.responseText);
+                    nodes.clear();
+                    edges.clear();
+                    nodes.add(graph_data.nodes);
+                    edges.add(graph_data.edges);
+                }
+            };
+            xhr.send(JSON.stringify({text: text.value}));
+        });
+
+        // Move this outside the 'input' event listener
+        const submitButton = document.getElementById('submit-button');
+
+        submitButton.addEventListener('click', function () {
+            const prompt = text.value;
+            const freshness = freshnessSlider.value;
+            const frequency_penalty = frequencySlider.value;
+            const max_tokens = maxTokensSlider.value;
+            const model_id = modelSelect.value;
+
+            get_completion(prompt, freshness, frequency_penalty, max_tokens, model_id);
+        });
+
+        function get_completion(prompt, freshness, frequency_penalty, max_tokens, model_id) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', '/get_completion', true);
+            xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    const completion = JSON.parse(xhr.responseText)['text'];
+                    const new_node_id = nodes.get().length + 1;
+                    nodes.update({id: new_node_id, label: completion});
+                    edges.update({from: new_node_id - 1, to: new_node_id});
+
+                    // Append the completion to the text field
+                    text.value += "\n" + completion;
+                }
+            };
+
+            xhr.send(JSON.stringify({
+                prompt: prompt,
+                freshness: freshness,
+                frequency_penalty: frequency_penalty,
+                max_tokens: max_tokens,
+                model_id: model_id,
+            }));
+        }
+
+
+        function updateFreshnessValue(val) {
+            document.getElementById('freshness-value').textContent = val;
+        }
+
+        function updateFrequencyValue(val) {
+            document.getElementById('frequency-value').textContent = val;
+        }
+
+        function updateMaxTokensValue(val) {
+            document.getElementById('maxtokens-value').textContent = val;
+        }
+
+
+    </script>
+
+{% endblock %}
