@@ -1,4 +1,3 @@
-.*
 .env
 secrets
 web_app/secrets
@@ -7,4 +6,6 @@ web_app/secrets
 secrets
 secrets/.env
 web_app/.env
-
+web_app/temp_local
+web_app/.env
+web_app/temp_local/log
