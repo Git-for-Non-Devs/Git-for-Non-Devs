@@ -1,0 +1,201 @@
+
+/* Add the following CSS classes to your existing styles.css file or inside the <style> tag in your HTML file */
+
+.custom-button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 25px; /* Make the buttons round */
+    background-color: #00a3cc; /* Set the background color */
+    color: #fff; /* Set the text color */
+    border: none; /* Remove the default border */
+    cursor: pointer; /* Change the cursor to a pointer */
+    margin-right: 10px; /* Add some space between the buttons */
+}
+
+.custom-button:hover {
+    background-color: #0087a8; /* Change the background color on hover */
+}
+
+.button-container {
+    display: flex; /* Use flexbox to position the buttons horizontally */
+    margin-top: 20px; /* Add some space above the buttons */
+}
+
+/* Keep the existing styles for button:focus and button:active */
+
+
+
+.logout-form {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+#logout-button {
+    background-color: transparent;
+    color: rgb(10, 7, 7);
+    border: none;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+#logout-button:hover {
+    background-color: transparent;
+    color: rgb(12, 9, 9);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.header .logo {
+    float: left;
+    margin-left: 30px;
+    padding: 20px 0;
+}
+
+.header .logo a {
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header .menu {
+    float: right;
+    margin-right: 30px;
+    padding: 20px 0;
+}
+
+.header .menu a {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 20px;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.header .menu a:hover {
+    color: #00bfff;
+}
+
+.container {
+    margin: 80px auto;
+    max-width: 960px;
+    padding: 0 20px;
+}
+
+.container h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.container .cta {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.container .cta a {
+    background-color: #00bfff;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.container .cta a:hover {
+    background-color: #007fff;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .social-icons {
+    margin-top: 20px;
+}
+
+.footer .social-icons a {
+    color: rgb(11, 7, 7);
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer .social-icons a:hover {
+    color: #00bfff;
+}
+
+@media screen and (max-width: 768px) {
+    .header .menu {
+        display: none;
+    }
+
+    .header .logo {
+        margin-left: 20px;
+    }
+
+    .header .logo a {
+        font-size: 24px;
+    }
+
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .container p {
+        font-size: 18px;
+    }
+
+    .container .cta a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+}
