@@ -1,0 +1,270 @@
+{
+  "main": {
+    "id": "5d12458016d87838",
+    "type": "split",
+    "children": [
+      {
+        "id": "89c13dd8b5cf9e0b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3c77d2967fcbcee9",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "8ec0334485309fdd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "da36b26c4e6877ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "230529_2_graph_tutorial.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "025c70ab020f44cc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "230529_graph_tutorial.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "301fb5f89896f422",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "230529_collaboartions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ebc03f5bf1f458d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "230511_code_changes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5456ace787482eba",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "230511_code_changes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fdb066145037c09d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "whisper.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 7
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a7a971e693a759f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "732157029aa144fb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac221fb25f7705a9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7c5aeacf70458104",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "351f891ce3cfff1f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "56ec28032b1ee6b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "53e33a7628f4e903",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "27fc033f3e07e0fd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "whisper.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cac7f63398ca8a74",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "whisper.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "071940c628573e95",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "ec95c81f73254c22",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "whisper.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fdb066145037c09d",
+  "lastOpenFiles": [
+    "time_dimension.md",
+    "README.md",
+    "Pasted image 20230529163244.png",
+    "graph_tutorial.md",
+    "230529_graph_tutorial.md",
+    "230529_collaboartions.md",
+    "230529_2_graph_tutorial.md",
+    "230529.md",
+    "230511_code_changes.md",
+    "whisper.md",
+    "graph/package-lock.json",
+    "graph/package.json",
+    "graph/node_modules/ngraph.pixel/test/makeActive.js",
+    "graph/node_modules/ngraph.pixel/test/intersect.js",
+    "graph/node_modules/ngraph.pixel/test/duck.js",
+    "graph/node_modules/ngraph.pixel/test",
+    "graph/node_modules/ngraph.pixel/style/style.js",
+    "graph/node_modules/ngraph.pixel/style",
+    "graph/node_modules/ngraph.pixel/CHANGELOG.md",
+    "graph/node_modules/ngraph.pixel/demo/offline/index.html",
+    "graph/node_modules/ngraph.pixel/lib/utils.js",
+    "graph/node_modules/ngraph.pixel/demo/offline/Readme.md",
+    "graph/node_modules/ngraph.pixel/demo/config/README.md",
+    "graph/node_modules/ngraph.pixel/demo/background/images-16.jpg",
+    "graph/node_modules/ngraph.pixel/README.md",
+    "graph/node_modules/ngraph.forcelayout3d/README.md",
+    "graph/node_modules/ngraph.merge/README.md",
+    "graph/node_modules/three.fly/README.md",
+    "graph/node_modules/pixel.layout/README.md",
+    "graph/node_modules/ngraph.physics.simulator/README.md",
+    "graph/node_modules/ngraph.quadtreebh3d/README.md",
+    "graph/node_modules/ngraph.physics.primitives/README.md",
+    "graph/node_modules/ngraph.quadtreebh/README.md",
+    "graph/node_modules/ngraph.events/README.md",
+    "graph/node_modules/ngraph.expose/README.md",
+    "graph/node_modules/three/README.md",
+    "graph/node_modules/element-class/readme.md"
+  ]
+}
