@@ -6,6 +6,7 @@
       {
         "id": "89c13dd8b5cf9e0b",
         "type": "tabs",
+        "dimension": 70.23411371237458,
         "children": [
           {
             "id": "3c77d2967fcbcee9",
@@ -13,18 +14,6 @@
             "state": {
               "type": "empty",
               "state": {}
-            }
-          },
-          {
-            "id": "8ec0334485309fdd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
             }
           },
           {
@@ -98,9 +87,52 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "71356c4ef0305f79",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "230601_3_graph_tutorial.md",
+                "mode": "source",
+                "source": false
+              }
+            },
+            "group": "39cb49e7c6966523"
+          },
+          {
+            "id": "ce5d4271869a0f80",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "whisper.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
+      },
+      {
+        "id": "46b1050df65397c8",
+        "type": "tabs",
+        "dimension": 29.76588628762542,
+        "children": [
+          {
+            "id": "c761e2055e2d8eeb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "230601_3_graph_tutorial.md"
+              }
+            },
+            "group": "39cb49e7c6966523"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -150,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 488.5
   },
   "right": {
     "id": "56ec28032b1ee6b7",
@@ -224,20 +256,33 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fdb066145037c09d",
+  "active": "ce5d4271869a0f80",
   "lastOpenFiles": [
     "time_dimension.md",
-    "README.md",
+    "start_up_vision_230607.excalidraw.md",
+    "start_up_graph_path_concept_230607.excalidraw.md",
+    "start_up_app_layout_230607.excalidraw.md",
     "Pasted image 20230529163244.png",
+    "README.md",
+    "230604_vision.md",
     "graph_tutorial.md",
+    "230601_3_graph_tutorial.md",
     "230529_graph_tutorial.md",
     "230529_collaboartions.md",
     "230529_2_graph_tutorial.md",
+    "230521_start_up.md",
     "230529.md",
+    "230520_start_up.md",
+    "230514_start_up.md",
+    "230512_start_up_adapt_kickstarter_structure.md",
     "230511_code_changes.md",
+    "230511_start_up_code_changes.md",
+    "230510_start_up_logo.md",
+    "230507_start_up.md",
     "whisper.md",
     "graph/package-lock.json",
     "graph/package.json",
@@ -253,18 +298,6 @@
     "graph/node_modules/ngraph.pixel/demo/offline/Readme.md",
     "graph/node_modules/ngraph.pixel/demo/config/README.md",
     "graph/node_modules/ngraph.pixel/demo/background/images-16.jpg",
-    "graph/node_modules/ngraph.pixel/README.md",
-    "graph/node_modules/ngraph.forcelayout3d/README.md",
-    "graph/node_modules/ngraph.merge/README.md",
-    "graph/node_modules/three.fly/README.md",
-    "graph/node_modules/pixel.layout/README.md",
-    "graph/node_modules/ngraph.physics.simulator/README.md",
-    "graph/node_modules/ngraph.quadtreebh3d/README.md",
-    "graph/node_modules/ngraph.physics.primitives/README.md",
-    "graph/node_modules/ngraph.quadtreebh/README.md",
-    "graph/node_modules/ngraph.events/README.md",
-    "graph/node_modules/ngraph.expose/README.md",
-    "graph/node_modules/three/README.md",
-    "graph/node_modules/element-class/readme.md"
+    "graph/node_modules/ngraph.pixel/README.md"
   ]
 }
